@@ -147,6 +147,40 @@ input[type="radio"], input[type="checkbox"] { accent-color: var(--wine); width: 
 .page-head { padding: clamp(2rem, 5vw, 4rem) 0 2rem; }
 .page-head p { font-size: 1.2rem; color: var(--ink-soft); margin-top: 1.25rem; }
 
+/* Hero place line */
+.hero-place { font-size: 0.975rem; color: var(--wine-deep); font-weight: 600; margin: 0 0 1.25rem; max-width: 30ch; }
+
+/* About */
+.about { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.about-body { font-size: 1.15rem; margin-top: 1.75rem; }
+.about-body p { max-width: 50ch; }
+.about-link { margin-top: 1.5rem; }
+.portrait { margin: 0; position: relative; justify-self: end; width: min(100%, 26rem); }
+.portrait::before { content: ""; position: absolute; inset: 1.25rem -1.25rem -1.25rem 1.25rem; background: var(--wine); border-radius: 6px; }
+.portrait img { position: relative; display: block; width: 100%; height: auto; border-radius: 6px; }
+
+/* Comparison */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.compare-col { padding: 2rem; border-radius: 6px; border: 1.5px solid var(--line); }
+.compare-col h3 { margin-bottom: 1.25rem; }
+.compare-col ul { margin: 0; padding: 0; list-style: none; }
+.compare-col li { padding: 0.85rem 0; border-top: 1px solid var(--line); color: var(--ink-soft); }
+.compare-ours { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.compare-ours li { color: var(--paper); border-top-color: #5b4d61; }
+
+/* Cities */
+.cities { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--ink); }
+.cities li { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+.city { font-family: var(--display); font-size: clamp(2rem, 6.5vw, 4.25rem); line-height: 1.05; }
+.city-note { color: var(--ink-soft); font-size: 0.975rem; text-align: right; flex: none; }
+.cities li:first-child .city-note { color: var(--wine-deep); font-weight: 600; }
+.cities-after { margin-top: 2rem; font-size: 1.125rem; color: var(--ink-soft); }
+
+@media (max-width: 52rem) {
+  .about, .compare { grid-template-columns: 1fr; }
+  .portrait { justify-self: start; width: min(88%, 22rem); }
+}
+
 /* Footer */
 .site-footer { padding: 2.5rem 0 3rem; font-size: 0.925rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
 .site-footer .wrap { display: flex; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; }
